@@ -2,11 +2,11 @@ sudo: required
 service:
  - docker
 before_install:
-  - docker build -t deenaramu/deena_repo:latest .
+  - docker build -t deenaramu/kub_vijay:latest .
 script:
  - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
  - docker images # to verify image is build or not
- - docker push deenaramu/deena_repo:latest
+ - docker push deenaramu/kub_vijay:latest
 notifications:
  email:
    recipients:
